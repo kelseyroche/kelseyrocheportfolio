@@ -1,3 +1,12 @@
+/* Import the Tropi Land font */
+@font-face {
+  font-family: 'Tropi Land';
+  src: url('../assets/fonts/Tropi Land - (Demo) hanscostudio.com.ttf') format('truetype'); /* Use the exact filename */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* General body styling */
 body {
   background: url("../assets/background.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -41,6 +50,12 @@ body {
   font-style: normal;
 }
 
+/* Apply Tropi Land font */
+.tropi-land {
+  font-family: 'Tropi Land', sans-serif;
+}
+
+/* Reset and global styles */
 html, body {
   margin: 0;
   padding: 0;
