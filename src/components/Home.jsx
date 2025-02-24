@@ -1,6 +1,8 @@
+
 // import React from "react";
 // import { Box, Button, Typography, Grid } from "@mui/material";
 // import { styled } from "@mui/system";
+// import { Link } from "react-router-dom";
 // import graphicImage from "../assets/left-banner-image.jpg"; // Ensure the image path is correct
 
 // const BubbleButton = styled(Button)({
@@ -81,9 +83,15 @@
 
 //           {/* Navigation Buttons */}
 //           <Box sx={{ display: "flex", gap: 3, marginTop: "40px" }}>
-//             {["about me", "projects", "contact"].map((text) => (
+//             {[
+//               { text: "about me", path: "/about" },
+//               { text: "projects", path: "/projects" },
+//               { text: "contact", path: "/contact" }
+//             ].map(({ text, path }) => (
 //               <Button
 //                 key={text}
+//                 component={Link}
+//                 to={path}
 //                 variant="outlined"
 //                 sx={{
 //                   borderRadius: "50px",
@@ -148,14 +156,14 @@ const Home = () => {
         display: "flex",
         height: "100vh",
         width: "100vw",
-        position: "fixed", // Prevents scrolling and locks the page
+        position: "fixed", // Locks layout
         top: 0,
         left: 0,
-        overflow: "hidden", // Prevents overflow scrolling
+        overflow: "hidden", // Prevents page scroll
       }}
     >
       <Grid container sx={{ height: "100%", width: "100%" }}>
-        {/* Left Side: Buttons and Kelsey Roche */}
+        {/* Left Side: Text & Buttons */}
         <Grid
           item
           xs={12}
@@ -163,36 +171,38 @@ const Home = () => {
           sx={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "flex-start", // Aligns content to the left
+            alignItems: { xs: "center", md: "flex-start" }, // Centers on mobile
             justifyContent: "center",
-            textAlign: "left",
+            textAlign: { xs: "center", md: "left" },
             gap: 2,
-            backgroundColor: "#F280B6", // Pink background
-            paddingLeft: 4, // Adds padding to the left
+            backgroundColor: "#F280B6",
+            padding: { xs: "20px", md: "50px" }, // Dynamic padding
+            height: "100%", // Ensures equal height
           }}
         >
-          {/* Kelsey Roche Name */}
+          {/* Name Text - Responsive Size */}
           <Typography
             variant="h1"
             className="fjalla-one-regular"
             sx={{
-              fontSize: '9rem', // Adjust size as needed
-              lineHeight: '1.2',
+              fontSize: { xs: "4rem", sm: "6rem", md: "8rem" }, // Adjusts based on screen size
+              lineHeight: "1.1",
               color: "#ffffff",
               marginBottom: 2,
+              wordBreak: "break-word", // Prevents text from overflowing
             }}
           >
             KELSEY<br />ROCHE
           </Typography>
 
-          {/* Fullstack Developer */}
+          {/* Fullstack Developer Button */}
           <Button
             variant="outlined"
             sx={{
               borderRadius: "50px",
               border: "2px solid black",
               color: "black",
-              fontSize: "1.5rem",
+              fontSize: { xs: "1rem", md: "1.5rem" }, // Adjusts text size
               textTransform: "none",
               padding: "10px 40px",
               fontWeight: "bold",
@@ -205,11 +215,18 @@ const Home = () => {
           </Button>
 
           {/* Navigation Buttons */}
-          <Box sx={{ display: "flex", gap: 3, marginTop: "40px" }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: { xs: "column", sm: "row" }, // Stacks vertically on small screens
+              gap: 2,
+              marginTop: "20px",
+            }}
+          >
             {[
               { text: "about me", path: "/about" },
               { text: "projects", path: "/projects" },
-              { text: "contact", path: "/contact" }
+              { text: "contact", path: "/contact" },
             ].map(({ text, path }) => (
               <Button
                 key={text}
@@ -220,9 +237,10 @@ const Home = () => {
                   borderRadius: "50px",
                   border: "2px solid black",
                   color: "black",
-                  fontSize: "1.2rem",
+                  fontSize: { xs: "1rem", md: "1.2rem" }, // Adjusts for mobile
                   textTransform: "none",
                   padding: "8px 30px",
+                  whiteSpace: "nowrap", // Prevents text from wrapping
                   "&:hover": {
                     backgroundColor: "#FFC0E0",
                   },
@@ -234,16 +252,17 @@ const Home = () => {
           </Box>
         </Grid>
 
-        {/* Right Side (Graphic Image) */}
+        {/* Right Side: Image Section */}
         <Grid
           item
           xs={12}
           md={6}
           sx={{
-            height: "100vh", // Makes sure it fills the whole screen
+            height: "100%",
             backgroundImage: `url(${graphicImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
           }}
         />
       </Grid>

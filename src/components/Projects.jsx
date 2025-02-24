@@ -1,13 +1,29 @@
 
 // import React from "react";
-// import { Grid, Box, Button, Typography } from "@mui/material"; // Ensure Typography is imported
-// import Navigation from "./Navigation"; // Ensure Navigation is imported
-// import ProjectCard from "./ProjectCard"; // Ensure ProjectCard is imported
+// import { Grid, Box, Button, Typography } from "@mui/material";
+// import Navigation from "./Navigation";
+// import ProjectCard from "./ProjectCard";
+// import wfantasyImage from "../assets/wfantasy_walkthrough.gif";
+// import wandrImage from "../assets/wandr_walkthrough.gif";
 
 // const projects = [
-//   { title: "Project 1", description: "This is an amazing project.", link: "https://project1.com" },
-//   { title: "Project 2", description: "Another cool project.", link: "https://project2.com" },
-//   { title: "Project 3", description: "This one is awesome too.", link: "https://project3.com" },
+//   { 
+//     title: "WFantasy", 
+//     description: "The Fantasy WNBA App is a user-friendly web application that allows basketball fans to create and manage their own fantasy teams based on WNBA player performances. Users can sign up, log in, build, and monitor rosters within a fixed budget, with player values determined by real stats. Built with a Flask backend and React frontend, it integrates modern tools like Fomantic-UI for styling and UseContext for state management. The goal is to make a fun, accessible, well-built application that will be deployed for use, and showcase my skills as a software engineer.", 
+//     link: "https://wnba-fantasy-league-1.onrender.com", 
+//     image: wfantasyImage 
+//   },
+//   { 
+//     title: "Wandr", 
+//     description: "A React-based application designed to document your travels, build itineraries for bucket list destinations, leave reviews and photos, and track visited places.", 
+//     link: "https://jtrapp18.github.io/wandr-personal-travel-journal/",
+//     image: wandrImage
+//   },
+//   { 
+//     title: "Project 3", 
+//     description: "This one is awesome too - A demonstration of advanced features and user-friendly design in a web application.", 
+//     link: "https://project3.com" 
+//   },
 // ];
 
 // function Projects() {
@@ -23,7 +39,6 @@
 //           display: 'flex',
 //           flexDirection: 'column',
 //           alignItems: 'center',
-//           justifyContent: 'flex-start',
 //           overflowY: 'auto',
 //           paddingTop: '70px',
 //           paddingX: 4,
@@ -32,17 +47,18 @@
 //         }}
 //       >
 //         {/* Projects Title Bubble */}
-//         <Box sx={{ marginTop: 4, marginBottom: 4 }}>
+//         <Box sx={{ marginTop: 4 }}>
 //           <Button
 //             variant="outlined"
 //             sx={{
 //               borderRadius: '50px',
-//               border: '2px solid black',
-//               color: 'black',
-//               fontSize: '2rem',
+//               border: '3px solid white',
+//               color: 'white',
+//               fontSize: '3rem',
 //               textTransform: 'none',
-//               padding: '10px 40px',
+//               padding: '15px 50px',
 //               backgroundColor: '#FF86C8',
+//               boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)',
 //               '&:hover': {
 //                 backgroundColor: '#FFC0E0',
 //               },
@@ -53,20 +69,24 @@
 //         </Box>
 
 //         {/* Projects Grid */}
-//         <Grid container spacing={3} justifyContent="center">
+//         <Grid container spacing={8} justifyContent="center" sx={{ maxWidth: '90%', margin: '0 auto' }}>
 //           {projects.map((project, index) => (
-//             <Grid item key={index} xs={12} sm={6} md={4}>
-//               <ProjectCard title={project.title} description={project.description} link={project.link} />
+//             <Grid item key={index} xs={12} container spacing={4} alignItems="center" sx={{ marginBottom: 8 }}>
+//               <Grid item xs={12} md={5}>
+//                 <ProjectCard 
+//                   title={project.title} 
+//                   link={project.link} 
+//                   image={project.image} 
+//                 />
+//               </Grid>
+//               <Grid item xs={12} md={7}>
+//                 <Typography variant="h5" sx={{ color: '#ffffff', textAlign: 'left', lineHeight: 1.8, fontSize: '1.5rem', padding: 3 }}>
+//                   {project.description}
+//                 </Typography>
+//               </Grid>
 //             </Grid>
 //           ))}
 //         </Grid>
-
-//         {/* Footer Section */}
-//         <Box sx={{ marginTop: 4, paddingBottom: 4, textAlign: 'center', color: '#FF86C8' }}>
-//           <Typography variant="body2">
-//             © 2025 Your Name. All rights reserved.
-//           </Typography>
-//         </Box>
 //       </Box>
 //     </>
 //   );
@@ -76,13 +96,30 @@
 
 import React from "react";
 import { Grid, Box, Button, Typography } from "@mui/material";
-import Navigation from "./Navigation"; // Ensure Navigation is imported
-import ProjectCard from "./ProjectCard"; // Ensure ProjectCard is imported
+import Navigation from "./Navigation";
+import ProjectCard from "./ProjectCard";
+import wfantasyImage from "../assets/wfantasy_walkthrough.gif";
+import wandrImage from "../assets/wandr_walkthrough.gif";
+import sideBorder from "../assets/side-border.jpg"; // Import the side border image
 
 const projects = [
-  { title: "Project 1", description: "This is an amazing project.", link: "https://project1.com" },
-  { title: "Project 2", description: "Another cool project.", link: "https://project2.com" },
-  { title: "Project 3", description: "This one is awesome too.", link: "https://project3.com" },
+  { 
+    title: "WFantasy", 
+    description: "The Fantasy WNBA App is a user-friendly web application that allows basketball fans to create and manage their own fantasy teams based on WNBA player performances. Users can sign up, log in, build, and monitor rosters within a fixed budget, with player values determined by real stats. Built with a Flask backend and React frontend, it integrates modern tools like Fomantic-UI for styling and UseContext for state management. The goal is to make a fun, accessible, well-built application that will be deployed for use, and showcase my skills as a software engineer.", 
+    link: "https://wnba-fantasy-league-1.onrender.com", 
+    image: wfantasyImage 
+  },
+  { 
+    title: "Wandr", 
+    description: "A React-based application designed to document your travels, build itineraries for bucket list destinations, leave reviews and photos, and track visited places.", 
+    link: "https://jtrapp18.github.io/wandr-personal-travel-journal/",
+    image: wandrImage
+  },
+  { 
+    title: "Project 3", 
+    description: "This one is awesome too - A demonstration of advanced features and user-friendly design in a web application.", 
+    link: "https://project3.com" 
+  },
 ];
 
 function Projects() {
@@ -93,18 +130,20 @@ function Projects() {
       <Box
         sx={{
           backgroundColor: 'black',
-          height: '100vh', // Ensure full viewport height
+          backgroundImage: `url(${sideBorder})`,
+          backgroundRepeat: 'repeat-y', // Repeat the image vertically
+          backgroundPosition: 'left', // Position the image on the left
+          backgroundSize: 'contain', // Adjust the size to fit the container
+          minHeight: '100vh',
           width: '100vw',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          justifyContent: 'space-between', // Distribute space between elements
-          overflow: 'hidden', // Prevent scrolling
+          overflowY: 'auto',
           paddingTop: '70px',
           paddingX: 4,
           boxSizing: 'border-box',
           margin: 0,
-          position: 'relative',
         }}
       >
         {/* Projects Title Bubble */}
@@ -113,12 +152,13 @@ function Projects() {
             variant="outlined"
             sx={{
               borderRadius: '50px',
-              border: '2px solid black',
-              color: 'black',
-              fontSize: '2rem',
+              border: '3px solid white',
+              color: 'white',
+              fontSize: '3rem',
               textTransform: 'none',
-              padding: '10px 40px',
+              padding: '15px 50px',
               backgroundColor: '#FF86C8',
+              boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)',
               '&:hover': {
                 backgroundColor: '#FFC0E0',
               },
@@ -129,20 +169,24 @@ function Projects() {
         </Box>
 
         {/* Projects Grid */}
-        <Grid container spacing={3} justifyContent="center" sx={{ flexGrow: 1, alignItems: 'center' }}>
+        <Grid container spacing={8} justifyContent="center" sx={{ maxWidth: '90%', margin: '0 auto' }}>
           {projects.map((project, index) => (
-            <Grid item key={index} xs={12} sm={6} md={4}>
-              <ProjectCard title={project.title} description={project.description} link={project.link} />
+            <Grid item key={index} xs={12} container spacing={4} alignItems="center" sx={{ marginBottom: 8 }}>
+              <Grid item xs={12} md={5}>
+                <ProjectCard 
+                  title={project.title} 
+                  link={project.link} 
+                  image={project.image} 
+                />
+              </Grid>
+              <Grid item xs={12} md={7}>
+                <Typography variant="h5" sx={{ color: '#ffffff', textAlign: 'left', lineHeight: 1.8, fontSize: '1.5rem', padding: 3 }}>
+                  {project.description}
+                </Typography>
+              </Grid>
             </Grid>
           ))}
         </Grid>
-
-        {/* Footer Section */}
-        <Box sx={{ paddingBottom: 4, textAlign: 'center', color: '#FF86C8', width: '100%' }}>
-          <Typography variant="body2">
-            © 2025 Your Name. All rights reserved.
-          </Typography>
-        </Box>
       </Box>
     </>
   );
