@@ -18,14 +18,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import theme from "./theme";
 import App from "./App";
-import WebFont from 'webfontloader';
 
-WebFont.load({
-  custom: {
-    families: ['Tropi Land'], // Specify the font family
-    urls: ['../App.css'] // Path to your custom CSS file
-  }
-});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
