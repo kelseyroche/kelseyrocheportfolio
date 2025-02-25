@@ -1,10 +1,11 @@
 /* Import the Tropi Land font */
 @font-face {
   font-family: 'Tropi Land';
-  src: url('../assets/fonts/Tropi Land - (Demo) hanscostudio.com.ttf') format('truetype'); /* Use the exact filename */
+  src: url('/fonts/tropi-land.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 
 /* General body styling */
 body {

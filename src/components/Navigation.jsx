@@ -149,13 +149,15 @@ function Navigation({ iconColor }) {
           {/* Navigation Content */}
           <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <Typography
-              variant="h4"
-              className="tropi-land" // Apply custom class for the funky font
+              vvariant="h4"
+              className="tropi-land"
               sx={{
+                fontFamily: "'Tropi Land', sans-serif !important", // Ensure it overrides MUI styles
                 fontWeight: "bold",
                 color: "#ffffff",
                 marginBottom: 4,
                 textAlign: "center",
+                fontSize:"3rem"
               }}
             >
               KELSEY<br />ROCHE
