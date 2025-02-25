@@ -115,11 +115,11 @@ const projects = [
     link: "https://jtrapp18.github.io/wandr-personal-travel-journal/",
     image: wandrImage
   },
-  { 
-    title: "Project 3", 
-    description: "This one is awesome too - A demonstration of advanced features and user-friendly design in a web application.", 
-    link: "https://project3.com" 
-  },
+//   { 
+//     title: "Project 3", 
+//     description: "This one is awesome too - A demonstration of advanced features and user-friendly design in a web application.", 
+//     link: "https://project3.com" 
+//   },
 ];
 
 function Projects() {
