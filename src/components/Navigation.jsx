@@ -53,17 +53,20 @@
 //           <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
 //             <Typography
 //               variant="h4"
+//               className="tropi-land"
 //               sx={{
+//                 fontFamily: "'Tropi Land', sans-serif !important", // Ensure it overrides MUI styles
 //                 fontWeight: "bold",
 //                 color: "#ffffff",
 //                 marginBottom: 4,
 //                 textAlign: "center",
+//                 fontSize: "3rem",
 //               }}
 //             >
 //               KELSEY<br />ROCHE
 //             </Typography>
 //             <List>
-//               {["Home", "About", "Projects", "Contact"].map((text) => (
+//               {["Home", "About", "Projects", "Contact", "KenKen"].map((text) => (
 //                 <ListItem
 //                   button
 //                   key={text}
@@ -149,7 +152,7 @@ function Navigation({ iconColor }) {
           {/* Navigation Content */}
           <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <Typography
-              vvariant="h4"
+              variant="h4"
               className="tropi-land"
               sx={{
                 fontFamily: "'Tropi Land', sans-serif !important", // Ensure it overrides MUI styles
@@ -157,18 +160,24 @@ function Navigation({ iconColor }) {
                 color: "#ffffff",
                 marginBottom: 4,
                 textAlign: "center",
-                fontSize:"3rem"
+                fontSize: "3rem",
               }}
             >
               KELSEY<br />ROCHE
             </Typography>
             <List>
-              {["Home", "About", "Projects", "Contact"].map((text) => (
+              {[
+                { name: "Home", path: "/" },
+                { name: "About", path: "/about" },
+                { name: "Projects", path: "/projects" },
+                { name: "Contact", path: "/contact" },
+                { name: "Play", path: "/kenken" }, // Change KenKen to Play
+              ].map((item) => (
                 <ListItem
                   button
-                  key={text}
+                  key={item.name}
                   component={Link}
-                  to={text.toLowerCase() === "home" ? "/" : `/${text.toLowerCase()}`}
+                  to={item.path}
                   sx={{
                     textAlign: "center",
                     color: "#ffffff",
@@ -178,7 +187,7 @@ function Navigation({ iconColor }) {
                   }}
                 >
                   <ListItemText
-                    primary={text}
+                    primary={item.name}
                     primaryTypographyProps={{ fontSize: '1.5rem', fontWeight: 'bold', textAlign: 'center' }}
                   />
                 </ListItem>

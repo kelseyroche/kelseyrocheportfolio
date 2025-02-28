@@ -228,6 +228,7 @@ const Home = () => {
               { text: "about me", path: "/about" },
               { text: "projects", path: "/projects" },
               { text: "contact", path: "/contact" },
+              { text: "play", path: "/kenken" },
             ].map(({ text, path }) => (
               <Button
                 key={text}

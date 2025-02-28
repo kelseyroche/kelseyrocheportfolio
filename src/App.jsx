@@ -43,6 +43,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Home from "./components/Home"; // Import the Home component
+import KenKen from "./components/KenKen";
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
             <Route path="/about" element={<AboutMe />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/kenken" element={<KenKen />} />
           </Routes>
         </main>
         <Footer />
