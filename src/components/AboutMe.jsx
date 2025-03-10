@@ -6,7 +6,7 @@ import Navigation from './Navigation'; // Ensure Navigation is imported
 import profilePic from '../assets/about-me-graphic.jpg'; // Image file
 
 const AboutMe = () => {
-  const techStack = ['React', 'JavaScript', 'Python', 'Flask', 'SQL', 'Postgres'];
+  const techStack = ['React', 'JavaScript', 'Python', 'Flask', 'SQL'];
 
   return (
     <>
@@ -63,7 +63,7 @@ const AboutMe = () => {
                     lineHeight: 1.4,
                   }}
                 >
-                  I'm a front-end engineer passionate about creating beautiful, intuitive user experiences. My background in UI design and operations gives me a unique problem-solving perspective. I thrive where logic meets creativity, using JavaScript and React to build sleek, responsive applications. I'm committed to making technology accessible and engaging and am an advocate for diversity in tech. Beyond coding, I enjoy supporting women's sports, watching Arsenal, and spending time with my wife. Let’s connect and create impactful digital experiences together! 🚀
+                  I'm a full stack engineer passionate about creating beautiful, intuitive user experiences. My background in UI design and operations gives me a unique problem-solving perspective. I thrive where logic meets creativity, using JavaScript and React to build sleek, responsive applications. I'm committed to making technology accessible and engaging and am an advocate for diversity in tech. Beyond coding, I enjoy supporting women's sports, watching Arsenal, and spending time with my wife. Let’s connect and create impactful digital experiences together! 🚀
                 </Typography>
               </CardContent>
             </Card>
