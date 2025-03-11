@@ -106,7 +106,7 @@ const projects = [
   { 
     title: "WFantasy", 
     description: "The Fantasy WNBA App is a user-friendly web application that allows basketball fans to create and manage their own fantasy teams based on WNBA player performances. Users can sign up, log in, build, and monitor rosters within a fixed budget, with player values determined by real stats. Built with a Flask backend and React frontend, it integrates modern tools like Fomantic-UI for styling and UseContext for state management. The goal is to make a fun, accessible, well-built application that will be deployed for use, and showcase my skills as a software engineer.", 
-    link: "https://wnba-fantasy-league-1.onrender.com", 
+    link: "https://youtu.be/B9th5iHYpIM", 
     image: wfantasyImage 
   },
   { 
