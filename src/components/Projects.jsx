@@ -119,7 +119,7 @@ const projects = [
   { 
     title: "Fourth Wing Threshing Quiz", 
     description: "Inspired by the captivating world of the Fourth Wing novels, the Threshing Quiz is an interactive web application designed to discover which dragon will choose you based on your personality traits. Through a series of carefully crafted questions, users can explore the mystical universe and connect with their inner dragon attributes. Built with React and utilizing React Router, the application offers a seamless user experience with dynamic routing and state management.", 
-    link: "https://fourth-wing-quiz.onrender.com/quiz",
+    link: "https://fourth-wing-quiz.onrender.com/",
     image: fourthWingQuizImage
   },
 ];
