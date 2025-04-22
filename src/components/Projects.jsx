@@ -100,6 +100,7 @@ import Navigation from "./Navigation";
 import ProjectCard from "./ProjectCard";
 import wfantasyImage from "../assets/wfantasy_walkthrough.gif";
 import wandrImage from "../assets/wandr_walkthrough.gif";
+import fourthWingQuizImage from "../assets/fourth_wing_quiz.png"
 import sideBorder from "../assets/side-border.jpg"; // Import the side border image
 
 const projects = [
@@ -115,11 +116,12 @@ const projects = [
     link: "https://jtrapp18.github.io/wandr-personal-travel-journal/",
     image: wandrImage
   },
-//   { 
-//     title: "Project 3", 
-//     description: "This one is awesome too - A demonstration of advanced features and user-friendly design in a web application.", 
-//     link: "https://project3.com" 
-//   },
+  { 
+    title: "Fourth Wing Threshing Quiz", 
+    description: "Inspired by the captivating world of the Fourth Wing novels, the Threshing Quiz is an interactive web application designed to discover which dragon will choose you based on your personality traits. Through a series of carefully crafted questions, users can explore the mystical universe and connect with their inner dragon attributes. Built with React and utilizing React Router, the application offers a seamless user experience with dynamic routing and state management.", 
+    link: "https://fourth-wing-quiz.onrender.com/quiz",
+    image: fourthWingQuizImage
+  },
 ];
 
 function Projects() {
