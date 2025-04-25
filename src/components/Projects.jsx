@@ -101,6 +101,7 @@ import ProjectCard from "./ProjectCard";
 import wfantasyImage from "../assets/wfantasy_walkthrough.gif";
 import wandrImage from "../assets/wandr_walkthrough.gif";
 import fourthWingQuizImage from "../assets/fourth_wing_quiz.png"
+import myTravelMapImage from "../assets/my_travel_map.png"
 import sideBorder from "../assets/side-border.jpg"; // Import the side border image
 
 const projects = [
@@ -121,6 +122,12 @@ const projects = [
     description: "Inspired by the captivating world of the Fourth Wing novels, the Threshing Quiz is an interactive web application designed to discover which dragon will choose you based on your personality traits. Through a series of carefully crafted questions, users can explore the mystical universe and connect with their inner dragon attributes. Built with React and utilizing React Router, the application offers a seamless user experience with dynamic routing and state management.", 
     link: "https://fourth-wing-quiz.onrender.com/",
     image: fourthWingQuizImage
+  },
+  { 
+    title: "My Travel Map", 
+    description: "My Travel Map is a dynamic, interactive travel map app built with React and Leaflet, allowing users to mark visited places, add personal notes, and visually track their global adventures. It features downloadable map images and Instagram Story–ready graphics, making it easy to share memories with style. ", 
+    link: "https://mytravelmap.onrender.com/",
+    image: myTravelMapImage
   },
 ];
 
