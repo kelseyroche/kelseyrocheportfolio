@@ -102,6 +102,7 @@ import wfantasyImage from "../assets/wfantasy_walkthrough.gif";
 import wandrImage from "../assets/wandr_walkthrough.gif";
 import fourthWingQuizImage from "../assets/fourth_wing_quiz.png"
 import myTravelMapImage from "../assets/my_travel_map.png"
+import studioBloomImage from "../assets/studiobloom.gif"
 import sideBorder from "../assets/side-border.jpg"; // Import the side border image
 
 const projects = [
@@ -128,6 +129,12 @@ const projects = [
     description: "My Travel Map is a dynamic, interactive travel map app built with React and Leaflet, allowing users to mark visited places, add personal notes, and visually track their global adventures. It features downloadable map images and Instagram Story–ready graphics, making it easy to share memories with style. ", 
     link: "https://mytravelmap.onrender.com/",
     image: myTravelMapImage
+  },
+  { 
+    title: "StudioBloom", 
+    description: "Bloom Digital is a sleek, responsive one-page website built with React (Vite) and styled entirely with custom CSS. I focused on elegant layout, semantic HTML, and fully responsive design, incorporating custom fonts (TT Ramillas) and scroll-based navigation. The site structure is fully componentized, and assets are optimized for performance. This project showcases both design sensibility and front-end development skills, from image handling to layout precision and font integration.", 
+    link: "https://studiobloom.onrender.com/",
+    image: studioBloomImage
   },
 ];
 
