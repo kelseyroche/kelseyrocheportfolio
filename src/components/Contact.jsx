@@ -3,6 +3,8 @@ import React from "react";
 import { Box, Button, Typography, Grid } from "@mui/material";
 import { styled } from "@mui/system";
 import { LinkedIn, GitHub, Article } from "@mui/icons-material";
+import { Brush } from "@mui/icons-material";
+
 import graphicImage from "../assets/right-banner-image.jpg";
 import Navigation from './Navigation'; // Import the Navigation component
 
@@ -104,6 +106,13 @@ const Contact = () => {
                 startIcon={<Article />}
               >
                 Blog
+              </ContactButton>
+              <ContactButton
+                href="https://bloomstudio.onrender.com"
+                target="_blank"
+                startIcon={<Brush />} // You can use a different icon if you'd like!
+              >
+                BloomStudio
               </ContactButton>
             </Box>
           </Grid>
